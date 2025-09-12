@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Blank New Tab",
+  "version": "1.0",
+  "homepage_url": "https://github.com/xamez/new-tab-extension",
+  "description": "Replaces the default new tab page with a blank page, exit fullscreen and focus address bar.",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "chrome_url_overrides": {
+    "newtab": "blank.html"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
