@@ -1,5 +1,5 @@
 chrome.tabs.onCreated.addListener(async (tab) => {    
-    if (tab.url === '') {    
+    if (tab.url === '' && !tab.openerTabId && !tab.pendingUrl) {    
         const window = await chrome.windows.get(tab.windowId);
         if (window.state === 'fullscreen') {
             await chrome.windows.update(window.id, { state: 'maximized' });
